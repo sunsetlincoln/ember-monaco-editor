@@ -40,11 +40,8 @@ export default Ember.Component.extend({
                 minimap: { enabled: ${this.get('minimapEnabled')} }
               });
               var origin = window.location.origin;
-              // TODO: when the code is autocompleted we don't get this even firing
-              // For example type a single ', the editor will autocomplete '' we only get
-              // the first ', not ''
               editor.onDidChangeModelContent(function () {
-                window.top.postMessage({updatedCode: event.target.value}, origin);
+                window.top.postMessage({updatedCode: editor.getValue()}, origin);
               });
             }
           });
