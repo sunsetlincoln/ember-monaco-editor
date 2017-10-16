@@ -25,7 +25,7 @@ export default Ember.Component.extend({
     frameDoc.open();
     frameDoc.write(`
       <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-      <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="print-modal-content">
+      <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="print-modal-content" style="padding:0;margin:0;width:100%;height:100%;">
       <head>
         <script src="/vs/loader.js"></script>
         <script>
