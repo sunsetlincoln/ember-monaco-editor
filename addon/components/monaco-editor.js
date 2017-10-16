@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   layout,
   classNames: ['monaco-editor'],
   automaticLayout: true,
+  minimapEnabled: true,
   init () {
     this._super(...arguments);
     const subscription = event=> {
@@ -35,7 +36,8 @@ export default Ember.Component.extend({
               var editor = monaco.editor.create(document.getElementById('monaco-editor-wrapper'), {
                 value: '${this.get('code')}',
                 language: '${this.get('language')}',
-                automaticLayout: ${this.get('automaticLayout')}
+                automaticLayout: ${this.get('automaticLayout')},
+                minimap: { enabled: ${this.get('minimapEnabled')}
               });
               var origin = window.location.origin;
               // TODO: when the code is autocompleted we don't get this even firing
