@@ -5,7 +5,7 @@ import getFrameById from 'ember-monaco-editor/utils/get-frame-by-id';
 export default Ember.Component.extend({
   layout,
   classNames: ['monaco-editor'],
-  automaticLayout: false,
+  automaticLayout: true,
   init () {
     this._super(...arguments);
     const subscription = event=> {
