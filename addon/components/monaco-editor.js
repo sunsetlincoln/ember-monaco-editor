@@ -35,7 +35,7 @@ export default Ember.Component.extend({
               var editor = monaco.editor.create(document.getElementById('monaco-editor-wrapper'), {
                 value: '${this.get('code')}',
                 language: '${this.get('language')}',
-                automaticLayout: this.get('automaticLayout')
+                automaticLayout: ${this.get('automaticLayout')}
               });
               var origin = window.location.origin;
               // TODO: when the code is autocompleted we don't get this even firing
