@@ -48,8 +48,8 @@ export default Ember.Component.extend({
           });
           </script>
       </head>
-      <body>
-        <div id="monaco-editor-wrapper" style="width:800px;height:600px;border:1px solid grey"></div>
+      <body style="padding:0;margin:0;width:100%;height:100%;">
+        <div id="monaco-editor-wrapper" style="width:100%;height:100%;border:none;"></div>
       </body>
       </html>
     `);
