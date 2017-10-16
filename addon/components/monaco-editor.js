@@ -37,7 +37,7 @@ export default Ember.Component.extend({
                 value: '${this.get('code')}',
                 language: '${this.get('language')}',
                 automaticLayout: ${this.get('automaticLayout')},
-                minimap: { enabled: ${this.get('minimapEnabled')}
+                minimap: { enabled: ${this.get('minimapEnabled')} }
               });
               var origin = window.location.origin;
               // TODO: when the code is autocompleted we don't get this even firing
