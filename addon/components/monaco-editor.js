@@ -5,6 +5,7 @@ import getFrameById from 'ember-monaco-editor/utils/get-frame-by-id';
 export default Ember.Component.extend({
   layout,
   classNames: ['monaco-editor'],
+  automaticLayout: false,
   init () {
     this._super(...arguments);
     const subscription = event=> {
@@ -33,7 +34,8 @@ export default Ember.Component.extend({
             if (typeof monaco !== "undefined") {
               var editor = monaco.editor.create(document.getElementById('monaco-editor-wrapper'), {
                 value: '${this.get('code')}',
-                language: '${this.get('language')}'
+                language: '${this.get('language')}',
+                automaticLayout: this.get('automaticLayout')
               });
               var origin = window.location.origin;
               // TODO: when the code is autocompleted we don't get this even firing
